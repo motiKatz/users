@@ -1,0 +1,21 @@
+mat-card{
+    background-color: lightgray;
+    width: 50%;
+    margin: 10px;
+}
+h1{
+    width: 50%;   
+}
+fieldset{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyMsUJYvNkwoF_JiyrgSO2t1i8tgHcb8r6Up3vZZNvXo-VNCmhHYz3Hfzb&s") ;
+    background-repeat:no-repeat;
+    background-position:right top;
+    width: 20%;
+    margin: 70px;
+}
+h3{
+    margin: 40px;
+}
+mat-card li{
+    margin: 15px;
+}

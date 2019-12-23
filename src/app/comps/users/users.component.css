@@ -1,0 +1,28 @@
+mat-card{
+    background-color: lightgray;
+    width: 35%;
+    margin: 10px;
+}
+h1{
+    width: 25%; 
+    padding: 50px;  
+}
+fieldset{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyMsUJYvNkwoF_JiyrgSO2t1i8tgHcb8r6Up3vZZNvXo-VNCmhHYz3Hfzb&s") ;
+    background-repeat:no-repeat;
+    background-position:right top;
+    width: 20%;
+    margin-left: 70px;
+    margin-top: 4px;
+}
+h3{
+    padding-top: 45px;
+    margin-bottom: -75px;
+    margin-left: 1700px;
+}
+mat-card li{
+    margin: 15px;
+}
+h2{
+    margin: 75px;
+}

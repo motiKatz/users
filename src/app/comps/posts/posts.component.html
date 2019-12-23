@@ -1,0 +1,41 @@
+
+<div *ngIf="svc.data" class="pageName">
+    <fieldset>
+    <legend><h1>post search:</h1></legend>
+    <label>userId</label><br>
+    <input (blur)="userId =$event.target.value">
+    <br>
+    <label>title</label><br>
+    <input (blur)="title =$event.target.value">
+    <br>
+    </fieldset>
+    <div *ngIf="userId && title; then myPipe else normal"> </div>
+    <ng-template #normal ><h1>this is the posts list</h1>
+        <ul *ngFor="let p of svc.data | async">
+            <mat-card>
+                <li>userId:{{p.userId}}</li>
+                <li>id:{{p.id}}</li>
+                <li>title:{{p.title}}</li>
+                <li>body:{{p.body}}</li>
+            </mat-card>
+            
+        </ul>
+    </ng-template>
+
+    <ng-template #myPipe>
+        <ul *ngFor="let p of svc.data | async |  search: 'userId' : userId | search: 'title' :  title">
+            <mat-card>
+            <li>userId:{{p.userId}}</li>
+            <li>id:{{p.id}}</li>
+            <li>title:{{p.title}}</li>
+            <li>body:{{p.body}}</li>
+            </mat-card>
+        </ul>
+    </ng-template>
+
+</div>
+
+<h3>to add a new post :
+<a mat-stroked-button routerLink="/addPost">click here</a></h3>
+
+<router-outlet></router-outlet>

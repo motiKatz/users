@@ -1,0 +1,26 @@
+
+<div class="add-post">
+
+  <h1>Please fill in your Post details</h1>
+    <mat-form-field>
+      <input [formControl]="userId" matInput placeholder="userId">
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea [formControl]="id" matInput placeholder="id"></textarea>
+      </mat-form-field>
+  
+    <mat-form-field>
+      <textarea [formControl]="title" matInput placeholder="title"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field>
+        <input [formControl]="body" matInput placeholder="body">
+    </mat-form-field>
+
+    <button (click)="addPost()" mat-stroked-button color="primary">submit</button>
+
+   
+    <h3>to see the new list :
+    <a mat-stroked-button routerLink="/posts">click here</a></h3>
+</div>

@@ -1,0 +1,27 @@
+
+<div class="add-user">
+
+  <h1>Please fill in your User details</h1>
+    <mat-form-field>
+      <input [formControl]="id" matInput placeholder="id">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea [formControl]="name" matInput placeholder="name"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field>
+        <input [formControl]="username" matInput placeholder="username">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input [formControl]="email" matInput placeholder="email">
+    </mat-form-field>
+
+    <button (click)="addUser()" mat-stroked-button color="primary">submit</button>
+
+   
+    <h3>to see the new list :
+    <a mat-stroked-button routerLink="/app-users">click here</a></h3>
+</div> 
+ 

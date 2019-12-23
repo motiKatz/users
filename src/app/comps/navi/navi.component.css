@@ -1,0 +1,29 @@
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+    background:cadetblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+}
+
+
+
+h3{
+    margin-left:80%;
+}
+
+
+/* header{
+    background:cadetblue;
+    padding: 70px 16px 16px;
+    color: white;
+} */

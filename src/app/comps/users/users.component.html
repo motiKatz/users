@@ -1,0 +1,48 @@
+<div *ngIf="logSvc.x == true">
+<div *ngIf="svc.data" class="pageName">
+
+    
+    <h3>Active users <mat-icon matBadge={{users}} matBadgeColor="warn">group</mat-icon></h3>
+    <fieldset>
+    <legend><h1>user search:</h1></legend>
+    <label>id</label><br>
+    <input (blur)="id =$event.target.value">
+    <br>
+    <label>name</label><br>
+    <input (blur)="name =$event.target.value">
+    <br>
+    </fieldset>
+    <div *ngIf="id && name; then myPipe else normal"> </div>
+    <ng-template #normal ><h1>this is the users list</h1>
+        <ul *ngFor="let u of svc.data | async">
+             <mat-card>
+            <li>id:{{u.id}}</li>
+            <li>name:{{u.name}}</li>
+            <li>userName:{{u.username}}</li>
+            <li>email:{{u.email}}</li>
+            </mat-card>
+            
+        </ul>
+    </ng-template>
+    
+
+    <ng-template #myPipe>
+        <ul *ngFor="let u of svc.data | async |  search:id : name">
+            <mat-card>
+            <li>id:{{u.id}}</li>
+            <li>name:{{u.name}}</li>
+            <li>userName:{{u.username}}</li>
+            <li>email:{{u.email}}</li>
+            </mat-card>
+        </ul>
+    </ng-template>
+
+</div>
+
+
+<h2>to add a new user :
+<a mat-stroked-button routerLink="/addUser">click here</a></h2>
+
+</div>
+
+<router-outlet></router-outlet>

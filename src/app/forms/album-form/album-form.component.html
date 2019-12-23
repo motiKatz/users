@@ -1,0 +1,22 @@
+
+<div class="add-album">
+
+  <h1>Please fill in your Akbum details</h1>
+    <mat-form-field>
+      <input [formControl]="userId" matInput placeholder="userId">
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea [formControl]="id" matInput placeholder="id"></textarea>
+      </mat-form-field>
+  
+    <mat-form-field>
+      <textarea [formControl]="title" matInput placeholder="title"></textarea>
+    </mat-form-field>
+
+    <button (click)="addAlbum()" mat-stroked-button color="primary">submit</button>
+
+   
+    <h3>to see the new list :
+    <a mat-stroked-button routerLink="/albums">click here</a></h3>
+</div>

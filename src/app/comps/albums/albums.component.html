@@ -1,0 +1,39 @@
+
+<div *ngIf="svc.data" class="pageName">
+    <fieldset>
+    <legend><h1>albums search:</h1></legend>
+    <label>userId</label><br>
+    <input (blur)="userId =$event.target.value">
+    <br>
+    <label>title</label><br>
+    <input (blur)="title =$event.target.value">
+    <br>
+    </fieldset>
+    <div *ngIf="userId && title; then myPipe else normal"> </div>
+    <ng-template #normal ><h1>this is the albums list</h1>
+        <ul *ngFor="let a of svc.data | async">
+            <mat-card>
+                <li>userId:{{a.userId}}</li>
+            <li>id:{{a.id}}</li>
+            <li>title:{{a.title}}</li>
+            </mat-card>
+            
+        </ul>
+    </ng-template>
+
+    <ng-template #myPipe>
+        <ul *ngFor="let a of svc.data | async |  search:userId : title">
+            <mat-card>
+            <li>userId:{{a.userId}}</li>
+            <li>id:{{a.id}}</li>
+            <li>title:{{a.title}}</li>
+            </mat-card>
+        </ul>
+    </ng-template>
+
+</div>
+
+<h3>to add a new album :
+<a mat-stroked-button routerLink="/addAlbum">click here</a></h3>
+
+<router-outlet></router-outlet>

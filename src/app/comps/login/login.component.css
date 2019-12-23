@@ -1,0 +1,29 @@
+
+div{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPC0dYIYHSmBiCLdh_RRVQHFspEnla0aPjlbJLv8cNYfyiekBv&s") ;
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-form{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+  
+  /* .example-full-width {
+    width: 100%;
+  } */
+  /* .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;s
+  
+} */
+button{
+  width: 20%;
+  background-color:grey;
+}

@@ -1,0 +1,14 @@
+.add-post{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  div{
+    width: 50%;
+    margin:20%;
+  }
+  button{
+    /* margin-right: 8px;    */
+    width: 20%;
+    background-color:grey;
+  }

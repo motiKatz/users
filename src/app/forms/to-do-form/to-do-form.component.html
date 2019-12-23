@@ -1,0 +1,25 @@
+<div class="add-form">
+
+  <h1>Please fill in your Todo details</h1>
+    <mat-form-field>
+      <input [formControl]="userId" matInput placeholder="userId">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <textarea [formControl]="title" matInput placeholder="title"></textarea>
+    </mat-form-field>
+  
+    <mat-form-field>
+        <input [formControl]="completed" matInput placeholder="completed">
+    </mat-form-field>
+
+    <button (click)="addTodo()" mat-stroked-button color="primary">submit</button>
+
+   
+    <h3>to see the new list :
+    <a mat-stroked-button routerLink="/todos">click here</a></h3>
+</div>
+
+
+
+

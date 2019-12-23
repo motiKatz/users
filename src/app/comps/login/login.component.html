@@ -1,0 +1,26 @@
+
+    
+<!-- <div class="whole-page"> -->
+<div  *ngIf="logSvc.x == false" >
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input [formControl]="userName" name="userName" matInput placeholder="userName">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input [formControl]="password" name="password" matInput placeholder="password">
+          </mat-form-field>
+          
+          
+          <button mat-raised-button color="primary" (click)="CheckLogin()">login</button>
+          
+           
+
+        
+      </form> 
+
+ 
+    
+</div>
+<!-- </div> -->
